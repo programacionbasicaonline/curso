@@ -1,0 +1,1740 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programa en 2 meses por 95€ - Curso de Programación</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#4f46e5',secondary:'#818cf8'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Inter', sans-serif;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=modern%2520programming%2520learning%2520environment%2520with%2520clean%2520gradient%2520background%2520on%2520the%2520left%2520side%2520for%2520text%2520placement%2520and%2520coding%2520elements%2520on%2520the%2520right%2520side%252C%2520showing%2520programming%2520interfaces%252C%2520code%2520snippets%252C%2520and%2520digital%2520elements%2520in%2520blue%2520and%2520purple%2520tones%252C%2520professional%2520high-quality%2520render&width=1600&height=800&seq=hero1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+.testimonial-card {
+transition: transform 0.3s ease;
+}
+.testimonial-card:hover {
+transform: translateY(-5px);
+}
+.module-card {
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.module-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.btn-primary {
+transition: all 0.3s ease;
+}
+.btn-primary:hover {
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+}
+.btn-primary:active {
+transform: translateY(0);
+}
+.input-field:focus {
+border-color: #4f46e5;
+box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2);
+}
+.faq-item {
+transition: all 0.3s ease;
+}
+.faq-content {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease;
+}
+.faq-item.active .faq-content {
+max-height: 500px;
+}
+.payment-step {
+transition: all 0.3s ease;
+}
+.payment-step.active {
+border-color: #4f46e5;
+background-color: rgba(79, 70, 229, 0.05);
+}
+.form-feedback {
+height: 20px;
+font-size: 0.875rem;
+transition: all 0.3s ease;
+}
+</style>
+</head>
+<body class="bg-white">
+<!-- Header -->
+<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center py-4">
+<a href="#" class="flex items-center space-x-2">
+<span class="text-2xl font-['Pacifico'] text-primary">logo</span>
+</a>
+<div class="hidden md:flex items-center space-x-6">
+<a href="#inicio" class="text-gray-700 hover:text-primary transition-colors font-medium">Inicio</a>
+<a href="#que-aprenderas" class="text-gray-700 hover:text-primary transition-colors font-medium">¿Qué Aprenderás?</a>
+<a href="#instructor" class="text-gray-700 hover:text-primary transition-colors font-medium">Instructor</a>
+<a href="#faq" class="text-gray-700 hover:text-primary transition-colors font-medium">Preguntas Frecuentes</a>
+<a href="#contacto" class="text-gray-700 hover:text-primary transition-colors font-medium">Contacto</a>
+<a href="#pago" class="bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">Inscríbete Ahora</a>
+</div>
+<button class="md:hidden flex items-center justify-center w-10 h-10 text-gray-700" id="mobile-menu-button">
+<i class="ri-menu-line ri-lg"></i>
+</button>
+</div>
+</div>
+<!-- Mobile menu -->
+<div class="md:hidden hidden bg-white shadow-lg absolute w-full" id="mobile-menu">
+<div class="container mx-auto px-4 py-3 space-y-3">
+<a href="#inicio" class="block text-gray-700 hover:text-primary transition-colors font-medium py-2">Inicio</a>
+<a href="#que-aprenderas" class="block text-gray-700 hover:text-primary transition-colors font-medium py-2">¿Qué Aprenderás?</a>
+<a href="#instructor" class="block text-gray-700 hover:text-primary transition-colors font-medium py-2">Instructor</a>
+<a href="#faq" class="block text-gray-700 hover:text-primary transition-colors font-medium py-2">Preguntas Frecuentes</a>
+<a href="#contacto" class="block text-gray-700 hover:text-primary transition-colors font-medium py-2">Contacto</a>
+<a href="#pago" class="block bg-primary text-white px-4 py-2 !rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap text-center mt-4">Inscríbete Ahora</a>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section id="inicio" class="hero-section">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+<div class="w-full max-w-2xl">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">Programa en 2 meses por solo 95€</h1>
+<p class="text-xl text-white/90 mb-8">Aprende a programar desde cero con nuestro curso intensivo y práctico. Desarrolla habilidades que transformarán tu futuro profesional.</p>
+<div class="flex flex-col sm:flex-row gap-4 mb-12">
+<a href="#pago" class="bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap text-center shadow-lg">¡Inscríbete Ahora!</a>
+<a href="#que-aprenderas" class="bg-white text-primary px-6 py-3 !rounded-button font-medium hover:bg-gray-100 transition-all whitespace-nowrap text-center">Ver Temario</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+<div class="bg-white/90 backdrop-blur-sm p-4 !rounded-md flex items-start space-x-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 !rounded-full text-primary">
+<i class="ri-time-line ri-lg"></i>
+</div>
+<div>
+<h3 class="font-medium text-gray-900">Solo 2 meses</h3>
+<p class="text-sm text-gray-600">Curso intensivo y práctico</p>
+</div>
+</div>
+<div class="bg-white/90 backdrop-blur-sm p-4 !rounded-md flex items-start space-x-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 !rounded-full text-primary">
+<i class="ri-computer-line ri-lg"></i>
+</div>
+<div>
+<h3 class="font-medium text-gray-900">100% Online</h3>
+<p class="text-sm text-gray-600">Aprende a tu ritmo</p>
+</div>
+</div>
+<div class="bg-white/90 backdrop-blur-sm p-4 !rounded-md flex items-start space-x-3">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 !rounded-full text-primary">
+<i class="ri-award-line ri-lg"></i>
+</div>
+<div>
+<h3 class="font-medium text-gray-900">Certificado</h3>
+<p class="text-sm text-gray-600">Al completar el curso</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="bg-gray-50 py-16">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Lo que dicen nuestros estudiantes</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="testimonial-card bg-white p-6 !rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520young%2520spanish%2520software%2520developer%2520man%2520with%2520short%2520dark%2520hair%2520and%2520confident%2520smile%252C%2520tech%2520company%2520office%2520background%252C%2520high%2520quality%2520corporate%2520photography&width=100&height=100&seq=test1&orientation=squarish" alt="Daniel Ruiz" class="w-12 h-12 !rounded-full object-cover">
+<div class="ml-4">
+<h4 class="font-medium text-gray-900">Daniel Ruiz</h4>
+<p class="text-sm text-gray-500">Desarrollador Junior en Accenture</p>
+</div>
+</div>
+<div class="flex mb-3 text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-700">"Gracias a este curso conseguí mi primer trabajo como desarrollador. La metodología práctica y el enfoque en proyectos reales me dieron exactamente lo que necesitaba para destacar en las entrevistas. El instructor Alejandro es excepcional explicando conceptos complejos."</p>
+</div>
+<div class="testimonial-card bg-white p-6 !rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520spanish%2520woman%2520in%2520her%252030s%2520with%2520medium%2520length%2520brown%2520hair%252C%2520creative%2520professional%2520look%252C%2520design%2520studio%2520background%252C%2520high%2520quality%2520portrait%2520photography&width=100&height=100&seq=test2&orientation=squarish" alt="Marina López" class="w-12 h-12 !rounded-full object-cover">
+<div class="ml-4">
+<h4 class="font-medium text-gray-900">Marina López</h4>
+<p class="text-sm text-gray-500">UX/UI Designer en Telefónica</p>
+</div>
+</div>
+<div class="flex mb-3 text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<p class="text-gray-700">"Como diseñadora, necesitaba entender el desarrollo web para mejorar mi comunicación con los programadores. Este curso no solo me enseñó a programar, sino que revolucionó mi forma de diseñar interfaces. Ahora puedo crear prototipos funcionales y entender las limitaciones técnicas."</p>
+</div>
+<div class="testimonial-card bg-white p-6 !rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520mature%2520spanish%2520businessman%2520in%2520his%252040s%2520with%2520glasses%2520and%2520short%2520gray%2520hair%252C%2520executive%2520look%252C%2520corporate%2520office%2520background%252C%2520high%2520quality%2520portrait%2520photography&width=100&height=100&seq=test3&orientation=squarish" alt="Alberto Vega" class="w-12 h-12 !rounded-full object-cover">
+<div class="ml-4">
+<h4 class="font-medium text-gray-900">Alberto Vega</h4>
+<p class="text-sm text-gray-500">Ex-Ejecutivo de Banca</p>
+</div>
+</div>
+<div class="flex mb-3 text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-700">"Después de 15 años en banca, decidí dar un giro a mi carrera. El curso está perfectamente estructurado para principiantes y el soporte post-curso es excepcional. En 4 meses desde terminar, ya estoy trabajando en una startup fintech como desarrollador full-stack."</p>
+</div>
+<div class="testimonial-card bg-white p-6 !rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520young%2520spanish%2520woman%2520with%2520short%2520black%2520hair%2520and%2520professional%2520appearance%252C%2520tech%2520startup%2520environment%252C%2520high%2520quality%2520corporate%2520photography&width=100&height=100&seq=test4&orientation=squarish" alt="Carmen Ortiz" class="w-12 h-12 !rounded-full object-cover">
+<div class="ml-4">
+<h4 class="font-medium text-gray-900">Carmen Ortiz</h4>
+<p class="text-sm text-gray-500">Fundadora de TechStart</p>
+</div>
+</div>
+<div class="flex mb-3 text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-700">"El curso me dio la confianza para lanzar mi propia startup tecnológica. Los conocimientos de desarrollo full-stack me permiten liderar mejor mi equipo técnico y entender todos los aspectos del desarrollo de producto. La inversión más rentable que he hecho en mi formación."</p>
+</div>
+<div class="testimonial-card bg-white p-6 !rounded-lg shadow-sm">
+<div class="flex items-center mb-4">
+<img src="https://readdy.ai/api/search-image?query=professional%2520headshot%2520of%2520a%2520spanish%2520woman%2520in%2520her%2520mid%252020s%2520with%2520long%2520brown%2520hair%2520and%2520friendly%2520smile%252C%2520modern%2520office%2520background%252C%2520high%2520quality%2520portrait%2520photography&width=100&height=100&seq=test6&orientation=squarish" alt="Lucía Torres" class="w-12 h-12 !rounded-full object-cover">
+<div class="ml-4">
+<h4 class="font-medium text-gray-900">Lucía Torres</h4>
+<p class="text-sm text-gray-500">Freelance Developer</p>
+</div>
+</div>
+<div class="flex mb-3 text-yellow-400">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-700">"El curso me dio las herramientas para trabajar como freelance. Los módulos de desarrollo full-stack me permiten abordar proyectos completos para mis clientes. En 6 meses he triplicado mis ingresos anteriores y trabajo en proyectos internacionales desde casa."</p>
+</div>
+</div>
+<div class="mt-12 text-center">
+<p class="text-gray-600 mb-8">Únete a más de 5,000 estudiantes que han transformado su carrera con nosotros</p>
+<a href="#pago" class="inline-block bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap shadow-md">¡Inscríbete Ahora!</a>
+</div>
+</div>
+</section>
+<!-- What You'll Learn Section -->
+<section id="que-aprenderas" class="py-20 bg-white">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">¿Qué Aprenderás?</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Nuestro curso está diseñado para llevarte desde los fundamentos básicos hasta el desarrollo de aplicaciones completas en solo 2 meses.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="module-card bg-white border border-gray-200 !rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=programming%2520fundamentals%2520visualization%2520with%2520code%2520snippets%2520and%2520basic%2520programming%2520concepts%2520illustrated%2520in%2520a%2520clean%2520modern%2520style%252C%2520blue%2520and%2520purple%2520color%2520scheme%252C%2520educational%2520content%2520visualization&width=400&height=225&seq=mod1&orientation=landscape" alt="Fundamentos de Programación" class="w-full h-48 object-cover">
+<div class="absolute top-3 left-3 bg-primary text-white text-xs font-medium px-2 py-1 !rounded-full">Módulo 1</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Fundamentos de Programación</h3>
+<p class="text-gray-700 mb-4">Aprende los conceptos básicos de la programación: variables, estructuras de control, funciones y lógica de programación.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Sintaxis y estructuras básicas</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Tipos de datos y variables</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Estructuras de control</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Funciones y modularidad</span>
+</li>
+</ul>
+<button id="module1-details" class="text-primary font-medium flex items-center hover:underline">
+Ver contenido detallado
+<i class="ri-arrow-right-line ml-1"></i>
+</button>
+</div>
+</div>
+<div class="module-card bg-white border border-gray-200 !rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=web%2520development%2520visualization%2520showing%2520HTML%252C%2520CSS%2520and%2520JavaScript%2520code%2520with%2520resulting%2520website%2520layout%252C%2520clean%2520modern%2520educational%2520style%252C%2520blue%2520and%2520purple%2520color%2520scheme%252C%2520professional%2520coding%2520environment&width=400&height=225&seq=mod2&orientation=landscape" alt="Desarrollo Web Frontend" class="w-full h-48 object-cover">
+<div class="absolute top-3 left-3 bg-primary text-white text-xs font-medium px-2 py-1 !rounded-full">Módulo 2</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Desarrollo Web Frontend</h3>
+<p class="text-gray-700 mb-4">Domina las tecnologías fundamentales para crear interfaces web atractivas y funcionales.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">HTML5 semántico</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">CSS3 y diseño responsive</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">JavaScript moderno</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Frameworks populares</span>
+</li>
+</ul>
+<a href="#" class="text-primary font-medium flex items-center hover:underline">
+Ver contenido detallado
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<div class="module-card bg-white border border-gray-200 !rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=backend%2520development%2520visualization%2520showing%2520server%252C%2520database%2520and%2520API%2520connections%252C%2520with%2520code%2520snippets%2520of%2520server-side%2520programming%252C%2520clean%2520modern%2520educational%2520style%252C%2520blue%2520and%2520purple%2520color%2520scheme&width=400&height=225&seq=mod3&orientation=landscape" alt="Desarrollo Backend" class="w-full h-48 object-cover">
+<div class="absolute top-3 left-3 bg-primary text-white text-xs font-medium px-2 py-1 !rounded-full">Módulo 3</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Desarrollo Backend</h3>
+<p class="text-gray-700 mb-4">Aprende a crear la lógica del servidor, gestionar bases de datos y desarrollar APIs.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Servidores y arquitectura</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Bases de datos SQL y NoSQL</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Desarrollo de APIs</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Seguridad y autenticación</span>
+</li>
+</ul>
+<a href="#" class="text-primary font-medium flex items-center hover:underline">
+Ver contenido detallado
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<div class="module-card bg-white border border-gray-200 !rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=project%2520development%2520visualization%2520showing%2520team%2520collaboration%252C%2520version%2520control%2520with%2520Git%252C%2520and%2520project%2520management%2520tools%252C%2520clean%2520modern%2520educational%2520style%252C%2520blue%2520and%2520purple%2520color%2520scheme&width=400&height=225&seq=mod4&orientation=landscape" alt="Metodologías y Herramientas" class="w-full h-48 object-cover">
+<div class="absolute top-3 left-3 bg-primary text-white text-xs font-medium px-2 py-1 !rounded-full">Módulo 4</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Metodologías y Herramientas</h3>
+<p class="text-gray-700 mb-4">Domina las herramientas y metodologías profesionales utilizadas en la industria.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Control de versiones (Git)</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Metodologías ágiles</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Testing y depuración</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Despliegue y CI/CD</span>
+</li>
+</ul>
+<a href="#" class="text-primary font-medium flex items-center hover:underline">
+Ver contenido detallado
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<div class="module-card bg-white border border-gray-200 !rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=mobile%2520app%2520development%2520visualization%2520showing%2520smartphone%2520interfaces%252C%2520responsive%2520design%2520and%2520cross-platform%2520development%2520code%252C%2520clean%2520modern%2520educational%2520style%252C%2520blue%2520and%2520purple%2520color%2520scheme&width=400&height=225&seq=mod5&orientation=landscape" alt="Desarrollo Móvil" class="w-full h-48 object-cover">
+<div class="absolute top-3 left-3 bg-primary text-white text-xs font-medium px-2 py-1 !rounded-full">Módulo 5</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Desarrollo Móvil</h3>
+<p class="text-gray-700 mb-4">Aprende a crear aplicaciones móviles multiplataforma con tecnologías modernas.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Fundamentos de desarrollo móvil</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Frameworks multiplataforma</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Diseño de interfaces móviles</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Publicación en tiendas</span>
+</li>
+</ul>
+<a href="#" class="text-primary font-medium flex items-center hover:underline">
+Ver contenido detallado
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+<div class="module-card bg-white border border-gray-200 !rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=final%2520project%2520development%2520visualization%2520showing%2520complete%2520web%2520application%2520with%2520frontend%2520and%2520backend%2520components%252C%2520deployment%2520pipeline%252C%2520clean%2520modern%2520educational%2520style%252C%2520blue%2520and%2520purple%2520color%2520scheme&width=400&height=225&seq=mod6&orientation=landscape" alt="Proyecto Final" class="w-full h-48 object-cover">
+<div class="absolute top-3 left-3 bg-primary text-white text-xs font-medium px-2 py-1 !rounded-full">Módulo 6</div>
+</div>
+<div class="p-6">
+<h3 class="text-xl font-semibold text-gray-900 mb-2">Proyecto Final</h3>
+<p class="text-gray-700 mb-4">Desarrolla un proyecto completo aplicando todos los conocimientos adquiridos durante el curso.</p>
+<ul class="space-y-2 mb-6">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Planificación y diseño</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Implementación full-stack</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Testing y optimización</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-2 mt-0.5">
+<i class="ri-check-line"></i>
+</div>
+<span class="text-gray-700">Presentación y defensa</span>
+</li>
+</ul>
+<a href="#" class="text-primary font-medium flex items-center hover:underline">
+Ver contenido detallado
+<i class="ri-arrow-right-line ml-1"></i>
+</a>
+</div>
+</div>
+</div>
+<div class="mt-16 text-center">
+<a href="#pago" class="inline-block bg-primary text-white px-8 py-3 !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap shadow-md">¡Inscríbete Ahora por Solo 100€!</a>
+</div>
+</div>
+</section>
+<!-- Instructor Section -->
+<section id="instructor" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Conoce a tu Instructor</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Aprende de profesionales con experiencia real en la industria del desarrollo de software.</p>
+</div>
+<div class="max-w-4xl mx-auto bg-white !rounded-xl shadow-sm overflow-hidden">
+<div class="md:flex">
+<div class="md:w-1/3">
+<img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=400&h=600&auto=format&fit=crop" alt="Alejandro Rodríguez" class="w-full h-full object-cover">
+</div>
+<div class="md:w-2/3 p-8">
+<h3 class="text-2xl font-bold text-gray-900 mb-2">Alejandro Rodríguez</h3>
+<p class="text-primary font-medium mb-4">Desarrollador Full Stack Senior</p>
+<p class="text-gray-700 mb-6">Con más de 10 años de experiencia en desarrollo de software, Alejandro ha trabajado en empresas como Google, Microsoft y varias startups tecnológicas. Es especialista en arquitecturas web modernas y desarrollo full stack.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 !rounded-full text-primary mr-3">
+<i class="ri-code-s-slash-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Especialidades</h4>
+<p class="text-sm text-gray-600">JavaScript, React, Node.js</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 !rounded-full text-primary mr-3">
+<i class="ri-building-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Experiencia</h4>
+<p class="text-sm text-gray-600">Google, Microsoft, Startups</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 !rounded-full text-primary mr-3">
+<i class="ri-graduation-cap-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Formación</h4>
+<p class="text-sm text-gray-600">Ing. Informática, Máster en IA</p>
+</div>
+</div>
+<div class="flex items-center">
+<div class="w-10 h-10 flex items-center justify-center bg-primary/10 !rounded-full text-primary mr-3">
+<i class="ri-user-voice-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-medium text-gray-900">Estudiantes</h4>
+<p class="text-sm text-gray-600">+5,000 formados</p>
+</div>
+</div>
+</div>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-600 hover:text-primary transition-colors">
+<div class="w-10 h-10 flex items-center justify-center border border-gray-200 !rounded-full">
+<i class="ri-linkedin-fill ri-lg"></i>
+</div>
+</a>
+<a href="#" class="text-gray-600 hover:text-primary transition-colors">
+<div class="w-10 h-10 flex items-center justify-center border border-gray-200 !rounded-full">
+<i class="ri-github-fill ri-lg"></i>
+</div>
+</a>
+<a href="#" class="text-gray-600 hover:text-primary transition-colors">
+<div class="w-10 h-10 flex items-center justify-center border border-gray-200 !rounded-full">
+<i class="ri-twitter-x-fill ri-lg"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Module Details Modals -->
+<div id="modal-overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50"></div>
+<div id="module1-modal" class="fixed inset-0 flex items-center justify-center hidden z-50">
+<div class="bg-white !rounded-xl shadow-xl max-w-3xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+<div class="p-6 border-b border-gray-200">
+<div class="flex justify-between items-center">
+<h3 class="text-2xl font-bold text-gray-900">Fundamentos de Programación</h3>
+<button class="modal-close text-gray-400 hover:text-gray-500">
+<i class="ri-close-line ri-lg"></i>
+</button>
+</div>
+</div>
+<div class="p-6">
+<div class="mb-8">
+<h4 class="text-lg font-semibold text-gray-900 mb-4">Descripción del Módulo</h4>
+<p class="text-gray-700">Este módulo fundamental te introducirá en el mundo de la programación, estableciendo las bases necesarias para convertirte en un desarrollador competente. A través de ejercicios prácticos y proyectos guiados, aprenderás los conceptos esenciales de la programación.</p>
+</div>
+<div class="mb-8">
+<h4 class="text-lg font-semibold text-gray-900 mb-4">Contenido Detallado</h4>
+<div class="space-y-6">
+<div>
+<h5 class="font-medium text-gray-900 mb-2">1. Introducción a la Programación (4 horas)</h5>
+<ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+<li>¿Qué es la programación?</li>
+<li>Historia y evolución</li>
+<li>Entorno de desarrollo</li>
+<li>Primer programa "Hola Mundo"</li>
+</ul>
+</div>
+<div>
+<h5 class="font-medium text-gray-900 mb-2">2. Variables y Tipos de Datos (6 horas)</h5>
+<ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+<li>Declaración de variables</li>
+<li>Tipos numéricos</li>
+<li>Cadenas de texto</li>
+<li>Booleanos</li>
+<li>Conversión entre tipos</li>
+</ul>
+</div>
+<div>
+<h5 class="font-medium text-gray-900 mb-2">3. Operadores y Expresiones (4 horas)</h5>
+<ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+<li>Operadores aritméticos</li>
+<li>Operadores de comparación</li>
+<li>Operadores lógicos</li>
+<li>Precedencia de operadores</li>
+</ul>
+</div>
+<div>
+<h5 class="font-medium text-gray-900 mb-2">4. Estructuras de Control (8 horas)</h5>
+<ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+<li>Condicionales if-else</li>
+<li>Switch case</li>
+<li>Bucles while y do-while</li>
+<li>Bucles for</li>
+<li>Break y continue</li>
+</ul>
+</div>
+<div>
+<h5 class="font-medium text-gray-900 mb-2">5. Funciones (8 horas)</h5>
+<ul class="list-disc list-inside text-gray-700 space-y-1 ml-4">
+<li>Declaración y llamada</li>
+<li>Parámetros y argumentos</li>
+<li>Retorno de valores</li>
+<li>Scope y lifetime</li>
+<li>Funciones recursivas</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="mb-8">
+<h4 class="text-lg font-semibold text-gray-900 mb-4">Proyectos Prácticos</h4>
+<div class="space-y-4">
+<div class="bg-gray-50 p-4 !rounded-lg">
+<h5 class="font-medium text-gray-900 mb-2">1. Calculadora Simple</h5>
+<p class="text-gray-700">Desarrolla una calculadora que realice operaciones básicas utilizando funciones y estructuras de control.</p>
+</div>
+<div class="bg-gray-50 p-4 !rounded-lg">
+<h5 class="font-medium text-gray-900 mb-2">2. Juego de Adivinanza</h5>
+<p class="text-gray-700">Crea un juego donde el usuario debe adivinar un número aleatorio, aplicando bucles y condicionales.</p>
+</div>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold text-gray-900 mb-4">Información Adicional</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-gray-50 p-4 !rounded-lg">
+<h5 class="font-medium text-gray-900 mb-1">Duración Total</h5>
+<p class="text-gray-700">30 horas</p>
+</div>
+<div class="bg-gray-50 p-4 !rounded-lg">
+<h5 class="font-medium text-gray-900 mb-1">Nivel</h5>
+<p class="text-gray-700">Principiante</p>
+</div>
+<div class="bg-gray-50 p-4 !rounded-lg">
+<h5 class="font-medium text-gray-900 mb-1">Evaluaciones</h5>
+<p class="text-gray-700">4 ejercicios prácticos</p>
+</div>
+<div class="bg-gray-50 p-4 !rounded-lg">
+<h5 class="font-medium text-gray-900 mb-1">Certificación</h5>
+<p class="text-gray-700">Incluida</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 border-t border-gray-200 flex justify-end">
+<button class="modal-close bg-gray-100 text-gray-700 px-6 py-2 !rounded-button font-medium hover:bg-gray-200 transition-all">Cerrar</button>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section id="faq" class="py-20 bg-white">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Resolvemos tus dudas sobre el curso de programación.</p>
+</div>
+<div class="max-w-3xl mx-auto">
+<div class="space-y-4">
+<div class="faq-item border border-gray-200 !rounded-lg overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+<h3 class="text-lg font-medium text-gray-900">¿Cuánto dura el curso?</h3>
+<div class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-add-line ri-lg faq-icon-plus"></i>
+<i class="ri-subtract-line ri-lg faq-icon-minus hidden"></i>
+</div>
+</button>
+<div class="faq-content bg-gray-50 px-6 pb-6">
+<p class="text-gray-700">El curso tiene una duración de 2 meses (8 semanas). Está diseñado para que puedas aprender a tu propio ritmo, con aproximadamente 10-15 horas de dedicación semanal. Todo el contenido estará disponible desde el primer día, por lo que podrás avanzar más rápido si dispones de más tiempo.</p>
+</div>
+</div>
+<div class="faq-item border border-gray-200 !rounded-lg overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+<h3 class="text-lg font-medium text-gray-900">¿Necesito conocimientos previos?</h3>
+<div class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-add-line ri-lg faq-icon-plus"></i>
+<i class="ri-subtract-line ri-lg faq-icon-minus hidden"></i>
+</div>
+</button>
+<div class="faq-content bg-gray-50 px-6 pb-6">
+<p class="text-gray-700">No, el curso está diseñado para principiantes absolutos. Comenzamos desde lo más básico y avanzamos progresivamente. Solo necesitas un ordenador con conexión a internet y ganas de aprender. Si ya tienes alguna experiencia en programación, podrás avanzar más rápido en los primeros módulos.</p>
+</div>
+</div>
+<div class="faq-item border border-gray-200 !rounded-lg overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+<h3 class="text-lg font-medium text-gray-900">¿Qué incluye el precio de 95€?</h3>
+<div class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-add-line ri-lg faq-icon-plus"></i>
+<i class="ri-subtract-line ri-lg faq-icon-minus hidden"></i>
+</div>
+</button>
+<div class="faq-content bg-gray-50 px-6 pb-6">
+<p class="text-gray-700">El precio incluye acceso completo a todos los módulos del curso, ejercicios prácticos, proyectos guiados, recursos adicionales, soporte técnico durante los 2 meses, acceso a nuestra comunidad privada de estudiantes y un certificado de finalización. Además, tendrás acceso de por vida al contenido del curso y a todas las actualizaciones futuras.</p>
+</div>
+</div>
+<div class="faq-item border border-gray-200 !rounded-lg overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+<h3 class="text-lg font-medium text-gray-900">¿Cómo son las clases?</h3>
+<div class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-add-line ri-lg faq-icon-plus"></i>
+<i class="ri-subtract-line ri-lg faq-icon-minus hidden"></i>
+</div>
+</button>
+<div class="faq-content bg-gray-50 px-6 pb-6">
+<p class="text-gray-700">El curso combina vídeos explicativos, material de lectura, ejercicios prácticos y proyectos reales. Cada módulo incluye evaluaciones para comprobar tu progreso. Además, tendrás acceso a sesiones de resolución de dudas en directo con el instructor cada semana. Todo el contenido está disponible 24/7 para que puedas estudiar cuando mejor te convenga.</p>
+</div>
+</div>
+<div class="faq-item border border-gray-200 !rounded-lg overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+<h3 class="text-lg font-medium text-gray-900">¿Obtendré algún certificado?</h3>
+<div class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-add-line ri-lg faq-icon-plus"></i>
+<i class="ri-subtract-line ri-lg faq-icon-minus hidden"></i>
+</div>
+</button>
+<div class="faq-content bg-gray-50 px-6 pb-6">
+<p class="text-gray-700">Sí, al completar el curso recibirás un certificado digital que acredita tus conocimientos y habilidades adquiridas. Este certificado incluye detalle de las horas de formación y los contenidos estudiados. Además, podrás mostrar los proyectos desarrollados durante el curso como parte de tu portafolio profesional.</p>
+</div>
+</div>
+<div class="faq-item border border-gray-200 !rounded-lg overflow-hidden">
+<button class="faq-toggle w-full flex justify-between items-center p-6 text-left bg-white hover:bg-gray-50 transition-colors">
+<h3 class="text-lg font-medium text-gray-900">¿Puedo solicitar un reembolso?</h3>
+<div class="w-6 h-6 flex items-center justify-center text-gray-500">
+<i class="ri-add-line ri-lg faq-icon-plus"></i>
+<i class="ri-subtract-line ri-lg faq-icon-minus hidden"></i>
+</div>
+</button>
+<div class="faq-content bg-gray-50 px-6 pb-6">
+<p class="text-gray-700">Ofrecemos una garantía de devolución de 7 días. Si durante la primera semana del curso consideras que no cumple con tus expectativas, puedes solicitar un reembolso completo sin preguntas. Simplemente contacta con nuestro equipo de soporte y procesaremos tu solicitud en un plazo de 48 horas.</p>
+</div>
+</div>
+</div>
+<div class="mt-12 text-center">
+<p class="text-gray-700 mb-4">¿Tienes más preguntas?</p>
+<a href="#contacto" class="inline-block bg-white border border-primary text-primary px-6 py-3 !rounded-button font-medium hover:bg-primary/5 transition-colors whitespace-nowrap">Contáctanos</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contacto" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Contacto</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">¿Tienes dudas sobre el curso? Estamos aquí para ayudarte.</p>
+</div>
+<div class="max-w-5xl mx-auto">
+<div class="bg-white !rounded-xl shadow-sm overflow-hidden">
+<div class="md:flex">
+<div class="md:w-2/5 bg-primary p-8 text-white">
+<h3 class="text-2xl font-bold mb-6">Información de Contacto</h3>
+<div class="space-y-6">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-white/10 !rounded-full mr-4 mt-1 shrink-0">
+<i class="ri-mail-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-medium mb-1">Email</h4>
+<p class="text-white/80">info@cursoprogramacion.es</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-white/10 !rounded-full mr-4 mt-1 shrink-0">
+<i class="ri-phone-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-medium mb-1">Teléfono</h4>
+<p class="text-white/80">+34 91 123 45 67</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-white/10 !rounded-full mr-4 mt-1 shrink-0">
+<i class="ri-time-line ri-lg"></i>
+</div>
+<div>
+<h4 class="font-medium mb-1">Horario de Atención</h4>
+<p class="text-white/80">Lunes a Viernes: 9:00 - 18:00</p>
+</div>
+</div>
+</div>
+<div class="mt-12">
+<h4 class="font-medium mb-4">Síguenos</h4>
+<div class="flex space-x-4">
+<a href="#" class="text-white hover:text-white/80 transition-colors">
+<div class="w-10 h-10 flex items-center justify-center bg-white/10 !rounded-full">
+<i class="ri-facebook-fill ri-lg"></i>
+</div>
+</a>
+<a href="#" class="text-white hover:text-white/80 transition-colors">
+<div class="w-10 h-10 flex items-center justify-center bg-white/10 !rounded-full">
+<i class="ri-twitter-x-fill ri-lg"></i>
+</div>
+</a>
+<a href="#" class="text-white hover:text-white/80 transition-colors">
+<div class="w-10 h-10 flex items-center justify-center bg-white/10 !rounded-full">
+<i class="ri-instagram-fill ri-lg"></i>
+</div>
+</a>
+<a href="#" class="text-white hover:text-white/80 transition-colors">
+<div class="w-10 h-10 flex items-center justify-center bg-white/10 !rounded-full">
+<i class="ri-linkedin-fill ri-lg"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="md:w-3/5 p-8">
+<h3 class="text-2xl font-bold text-gray-900 mb-6">Envíanos un Mensaje</h3>
+<form id="contact-form" class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nombre</label>
+<input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required>
+<div class="form-feedback text-red-500"></div>
+</div>
+<div>
+<label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+<input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required>
+<div class="form-feedback text-red-500"></div>
+</div>
+</div>
+<div>
+<label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
+<input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required>
+<div class="form-feedback text-red-500"></div>
+</div>
+<div>
+<label for="message" class="block text-sm font-medium text-gray-700 mb-1">Mensaje</label>
+<textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required></textarea>
+<div class="form-feedback text-red-500"></div>
+</div>
+<div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap btn-primary">Enviar Mensaje</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feedback Section -->
+<section id="feedback" class="py-20 bg-white">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Sugerencias y Quejas</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Tu opinión es importante para nosotros. Ayúdanos a mejorar nuestro servicio.</p>
+</div>
+<div class="max-w-3xl mx-auto">
+<div class="bg-white !rounded-xl shadow-sm overflow-hidden border border-gray-200">
+<div class="p-8">
+<form id="feedback-form" class="space-y-6">
+<div>
+<label for="feedback-type" class="block text-sm font-medium text-gray-700 mb-1">Tipo de Mensaje</label>
+<div class="relative">
+<select id="feedback-type" name="feedback-type" class="w-full appearance-none px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm pr-8">
+<option value="suggestion">Sugerencia</option>
+<option value="complaint">Queja</option>
+<option value="improvement">Propuesta de Mejora</option>
+<option value="other">Otro</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none text-gray-500">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+<div>
+<label for="feedback-subject" class="block text-sm font-medium text-gray-700 mb-1">Asunto</label>
+<input type="text" id="feedback-subject" name="feedback-subject" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required>
+<div class="form-feedback text-red-500"></div>
+</div>
+<div>
+<label for="feedback-message" class="block text-sm font-medium text-gray-700 mb-1">Descripción Detallada</label>
+<textarea id="feedback-message" name="feedback-message" rows="5" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required></textarea>
+<div class="form-feedback text-red-500"></div>
+</div>
+<div>
+<label for="feedback-priority" class="block text-sm font-medium text-gray-700 mb-1">Prioridad</label>
+<div class="flex items-center space-x-4">
+<label class="inline-flex items-center">
+<input type="radio" name="feedback-priority" value="low" class="sr-only" checked>
+<span class="w-4 h-4 border border-gray-300 !rounded-full flex items-center justify-center mr-2 custom-radio">
+<span class="w-2 h-2 bg-primary !rounded-full hidden radio-checked"></span>
+</span>
+<span class="text-sm text-gray-700">Baja</span>
+</label>
+<label class="inline-flex items-center">
+<input type="radio" name="feedback-priority" value="medium" class="sr-only">
+<span class="w-4 h-4 border border-gray-300 !rounded-full flex items-center justify-center mr-2 custom-radio">
+<span class="w-2 h-2 bg-primary !rounded-full hidden radio-checked"></span>
+</span>
+<span class="text-sm text-gray-700">Media</span>
+</label>
+<label class="inline-flex items-center">
+<input type="radio" name="feedback-priority" value="high" class="sr-only">
+<span class="w-4 h-4 border border-gray-300 !rounded-full flex items-center justify-center mr-2 custom-radio">
+<span class="w-2 h-2 bg-primary !rounded-full hidden radio-checked"></span>
+</span>
+<span class="text-sm text-gray-700">Alta</span>
+</label>
+</div>
+</div>
+<div>
+<label for="feedback-file" class="block text-sm font-medium text-gray-700 mb-1">Adjuntar Archivo (opcional)</label>
+<div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed !rounded-md">
+<div class="space-y-1 text-center">
+<div class="flex text-sm text-gray-600">
+<label for="feedback-file" class="relative cursor-pointer bg-white !rounded-md font-medium text-primary hover:text-primary/80 focus-within:outline-none">
+<span>Subir un archivo</span>
+<input id="feedback-file" name="feedback-file" type="file" class="sr-only">
+</label>
+<p class="pl-1">o arrastra y suelta</p>
+</div>
+<p class="text-xs text-gray-500">PNG, JPG, PDF hasta 10MB</p>
+</div>
+</div>
+<div id="file-name" class="mt-2 text-sm text-gray-500"></div>
+</div>
+<div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap btn-primary">Enviar Feedback</button>
+</div>
+</form>
+</div>
+</div>
+<div class="mt-8 bg-gray-50 !rounded-xl p-6 border border-gray-200">
+<h3 class="text-lg font-medium text-gray-900 mb-4">Seguimiento de Tickets</h3>
+<p class="text-gray-700 mb-4">Si ya has enviado una sugerencia o queja, puedes consultar su estado introduciendo el número de referencia que recibiste por email.</p>
+<div class="flex">
+<input type="text" id="ticket-id" placeholder="Ej: TK-12345" class="flex-1 px-4 py-2 border border-gray-300 !rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm">
+<button id="check-ticket" class="bg-primary text-white px-4 py-2 !rounded-r-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap">Consultar</button>
+</div>
+<div id="ticket-result" class="mt-4 hidden">
+<div class="bg-white p-4 !rounded-md border border-gray-200">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-medium text-gray-900">Ticket #<span id="ticket-number">TK-12345</span></h4>
+<span id="ticket-status" class="px-2 py-1 !rounded-full text-xs font-medium bg-yellow-100 text-yellow-800">En proceso</span>
+</div>
+<p id="ticket-description" class="text-gray-700 text-sm mb-2">Sugerencia sobre el contenido del módulo 3...</p>
+<div class="flex justify-between items-center text-xs text-gray-500">
+<span id="ticket-date">Enviado: 10/05/2025</span>
+<span id="ticket-response-time">Tiempo estimado de respuesta: 24-48h</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Payment Section -->
+<section id="pago" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold text-gray-900 mb-4">Inscríbete Ahora</h2>
+<p class="text-xl text-gray-600 max-w-3xl mx-auto">Comienza tu camino en la programación con nuestro curso completo por solo 100€ (IVA incluido).</p>
+</div>
+<div class="max-w-4xl mx-auto">
+<div class="bg-white !rounded-xl shadow-md overflow-hidden">
+<div class="p-8">
+<div class="flex justify-between items-center mb-8">
+<div class="space-y-1">
+<h3 class="text-2xl font-bold text-gray-900">Curso Completo de Programación</h3>
+<p class="text-gray-600">Acceso inmediato a todo el contenido</p>
+</div>
+<div class="text-right">
+<p class="text-3xl font-bold text-primary">100€</p>
+<p class="text-gray-500 text-sm">IVA incluido</p>
+</div>
+</div>
+<div class="mb-8">
+<div class="flex justify-between mb-6">
+<div class="w-1/3 px-2">
+<div class="payment-step active relative">
+<div class="h-1 bg-gray-200 absolute top-4 left-1/2 w-full"></div>
+<div class="flex flex-col items-center relative">
+<div class="w-8 h-8 !rounded-full bg-primary text-white flex items-center justify-center font-medium z-10">1</div>
+<p class="mt-2 text-sm font-medium text-gray-900">Información</p>
+</div>
+</div>
+</div>
+<div class="w-1/3 px-2">
+<div class="payment-step relative">
+<div class="h-1 bg-gray-200 absolute top-4 left-1/2 w-full"></div>
+<div class="flex flex-col items-center relative">
+<div class="w-8 h-8 !rounded-full bg-gray-200 text-gray-600 flex items-center justify-center font-medium z-10">2</div>
+<p class="mt-2 text-sm font-medium text-gray-600">Pago</p>
+</div>
+</div>
+</div>
+<div class="w-1/3 px-2">
+<div class="payment-step relative">
+<div class="flex flex-col items-center relative">
+<div class="w-8 h-8 !rounded-full bg-gray-200 text-gray-600 flex items-center justify-center font-medium z-10">3</div>
+<p class="mt-2 text-sm font-medium text-gray-600">Confirmación</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="payment-step-1" class="payment-step-content">
+<form id="payment-form-1" class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div>
+<label for="payment-name" class="block text-sm font-medium text-gray-700 mb-1">Nombre Completo</label>
+<input type="text" id="payment-name" name="payment-name" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required>
+<div class="form-feedback text-red-500"></div>
+</div>
+<div>
+<label for="payment-email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+<input type="email" id="payment-email" name="payment-email" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required>
+<div class="form-feedback text-red-500"></div>
+</div>
+</div>
+<div>
+<label for="payment-phone" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+<input type="tel" id="payment-phone" name="payment-phone" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required>
+<div class="form-feedback text-red-500"></div>
+</div>
+<div>
+<label for="payment-country" class="block text-sm font-medium text-gray-700 mb-1">País</label>
+<div class="relative">
+<select id="payment-country" name="payment-country" class="w-full appearance-none px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm pr-8">
+<option value="ES">España</option>
+<option value="MX">México</option>
+<option value="CO">Colombia</option>
+<option value="AR">Argentina</option>
+<option value="CL">Chile</option>
+<option value="PE">Perú</option>
+<option value="OT">Otro</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none text-gray-500">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+</div>
+</div>
+<div>
+<div class="flex items-center">
+<input id="payment-terms" name="payment-terms" type="checkbox" class="sr-only" required>
+<span class="w-5 h-5 border border-gray-300 !rounded flex items-center justify-center mr-2 custom-checkbox">
+<i class="ri-check-line text-white text-xs hidden checkbox-checked"></i>
+</span>
+<label for="payment-terms" class="text-sm text-gray-700">
+Acepto los <a href="#" class="text-primary hover:underline">términos y condiciones</a> y la <a href="#" class="text-primary hover:underline">política de privacidad</a>
+</label>
+</div>
+<div class="form-feedback text-red-500 mt-1"></div>
+</div>
+<div>
+<button type="submit" class="w-full bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap btn-primary">Continuar al Pago</button>
+</div>
+</form>
+</div>
+<div id="payment-step-2" class="payment-step-content hidden">
+<form id="payment-form-2" class="space-y-6">
+<div>
+<label class="block text-sm font-medium text-gray-700 mb-3">Método de Pago</label>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<label class="relative border border-gray-300 !rounded-md p-4 flex flex-col items-center cursor-pointer hover:border-primary transition-colors payment-method-option">
+<input type="radio" name="payment-method" value="card" class="sr-only" checked>
+<div class="w-12 h-12 flex items-center justify-center mb-3">
+<i class="ri-bank-card-fill ri-2x text-gray-700"></i>
+</div>
+<span class="text-sm font-medium text-gray-900">Tarjeta de Crédito</span>
+<span class="absolute top-2 right-2 w-4 h-4 !rounded-full border border-primary hidden payment-method-check">
+<span class="absolute inset-0 m-auto w-2 h-2 !rounded-full bg-primary"></span>
+</span>
+</label>
+<label class="relative border border-gray-300 !rounded-md p-4 flex flex-col items-center cursor-pointer hover:border-primary transition-colors payment-method-option">
+<input type="radio" name="payment-method" value="paypal" class="sr-only">
+<div class="w-12 h-12 flex items-center justify-center mb-3">
+<i class="ri-paypal-fill ri-2x text-gray-700"></i>
+</div>
+<span class="text-sm font-medium text-gray-900">PayPal</span>
+<span class="absolute top-2 right-2 w-4 h-4 !rounded-full border border-primary hidden payment-method-check">
+<span class="absolute inset-0 m-auto w-2 h-2 !rounded-full bg-primary"></span>
+</span>
+</label>
+<label class="relative border border-gray-300 !rounded-md p-4 flex flex-col items-center cursor-pointer hover:border-primary transition-colors payment-method-option">
+<input type="radio" name="payment-method" value="transfer" class="sr-only">
+<div class="w-12 h-12 flex items-center justify-center mb-3">
+<i class="ri-bank-line ri-2x text-gray-700"></i>
+</div>
+<span class="text-sm font-medium text-gray-900">Transferencia</span>
+<span class="absolute top-2 right-2 w-4 h-4 !rounded-full border border-primary hidden payment-method-check">
+<span class="absolute inset-0 m-auto w-2 h-2 !rounded-full bg-primary"></span>
+</span>
+</label>
+</div>
+</div>
+<div id="card-payment-details">
+<div>
+<label for="card-number" class="block text-sm font-medium text-gray-700 mb-1">Número de Tarjeta</label>
+<div class="relative">
+<input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required>
+<div class="absolute inset-y-0 right-0 flex items-center px-3">
+<i class="ri-visa-line text-gray-400"></i>
+</div>
+</div>
+<div class="form-feedback text-red-500"></div>
+</div>
+<div class="grid grid-cols-2 gap-6 mt-6">
+<div>
+<label for="card-expiry" class="block text-sm font-medium text-gray-700 mb-1">Fecha de Expiración</label>
+<input type="text" id="card-expiry" name="card-expiry" placeholder="MM/AA" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required>
+<div class="form-feedback text-red-500"></div>
+</div>
+<div>
+<label for="card-cvc" class="block text-sm font-medium text-gray-700 mb-1">CVC</label>
+<div class="relative">
+<input type="text" id="card-cvc" name="card-cvc" placeholder="123" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required>
+<div class="absolute inset-y-0 right-0 flex items-center px-3 cursor-pointer" id="cvc-info">
+<i class="ri-question-line text-gray-400"></i>
+</div>
+</div>
+<div class="form-feedback text-red-500"></div>
+</div>
+</div>
+<div class="mt-6">
+<label for="card-name" class="block text-sm font-medium text-gray-700 mb-1">Nombre en la Tarjeta</label>
+<input type="text" id="card-name" name="card-name" class="w-full px-4 py-2 border border-gray-300 !rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary input-field text-sm" required>
+<div class="form-feedback text-red-500"></div>
+</div>
+</div>
+<div id="paypal-payment-details" class="hidden">
+<div class="bg-blue-50 p-4 !rounded-md">
+<p class="text-sm text-gray-700">Serás redirigido a PayPal para completar el pago de forma segura.</p>
+</div>
+</div>
+<div id="transfer-payment-details" class="hidden">
+<div class="bg-gray-50 p-4 !rounded-md">
+<p class="text-sm text-gray-700 mb-2">Realiza una transferencia a la siguiente cuenta bancaria:</p>
+<ul class="text-sm text-gray-700 space-y-1">
+<li><span class="font-medium">Banco:</span> Banco Ejemplo</li>
+<li><span class="font-medium">IBAN:</span> ES12 3456 7890 1234 5678 9012</li>
+<li><span class="font-medium">Beneficiario:</span> Curso de Programación SL</li>
+<li><span class="font-medium">Concepto:</span> Tu nombre completo</li>
+</ul>
+<p class="text-sm text-gray-700 mt-2">Una vez realizada la transferencia, recibirás acceso al curso en un plazo de 24-48 horas laborables.</p>
+</div>
+</div>
+<div class="pt-4 border-t border-gray-200">
+<div class="flex justify-between font-bold text-lg">
+<span class="text-gray-900">Total (IVA incluido)</span>
+<span class="text-primary">100,00 €</span>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button type="button" id="back-to-step-1" class="sm:w-1/3 bg-white border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-all whitespace-nowrap">Volver</button>
+<button type="submit" class="sm:w-2/3 bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap btn-primary">Realizar Pago</button>
+</div>
+</form>
+</div>
+<div id="payment-step-3" class="payment-step-content hidden text-center py-8">
+<div class="w-20 h-20 !rounded-full bg-green-100 flex items-center justify-center mx-auto mb-6">
+<i class="ri-check-line ri-2x text-green-600"></i>
+</div>
+<h3 class="text-2xl font-bold text-gray-900 mb-2">¡Pago Completado con Éxito!</h3>
+<p class="text-gray-600 mb-6">Gracias por inscribirte en nuestro curso de programación.</p>
+<div class="max-w-md mx-auto bg-gray-50 p-6 !rounded-lg mb-8">
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Número de Pedido:</span>
+<span class="text-gray-900 font-medium">#ORD-12345</span>
+</div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Fecha:</span>
+<span class="text-gray-900">12/05/2025</span>
+</div>
+<div class="flex justify-between mb-2">
+<span class="text-gray-700">Total:</span>
+<span class="text-gray-900">100,00 €</span>
+</div>
+<div class="flex justify-between">
+<span class="text-gray-700">Método de Pago:</span>
+<span class="text-gray-900">Tarjeta de Crédito</span>
+</div>
+</div>
+<p class="text-gray-700 mb-6">Hemos enviado un email de confirmación a <span class="font-medium" id="confirmation-email">ejemplo@email.com</span> con los detalles de acceso al curso.</p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center">
+<a href="#" class="inline-flex items-center justify-center bg-white border border-gray-300 text-gray-700 px-6 py-3 !rounded-button font-medium hover:bg-gray-50 transition-all whitespace-nowrap">
+<i class="ri-download-line mr-2"></i>
+Descargar Factura
+</a>
+<a href="#" class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 !rounded-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap">
+<i class="ri-login-box-line mr-2"></i>
+Acceder al Curso
+</a>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 px-8 py-6 border-t border-gray-200">
+<div class="flex flex-col sm:flex-row items-center justify-between">
+<div class="flex items-center mb-4 sm:mb-0">
+<div class="w-10 h-10 flex items-center justify-center bg-green-100 !rounded-full text-green-600 mr-3">
+<i class="ri-shield-check-line ri-lg"></i>
+</div>
+<p class="text-gray-700 text-sm">Pago 100% seguro con cifrado SSL</p>
+</div>
+<div class="flex space-x-3">
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-visa-fill ri-lg text-gray-700"></i>
+</div>
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-mastercard-fill ri-lg text-gray-700"></i>
+</div>
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-paypal-fill ri-lg text-gray-700"></i>
+</div>
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-bank-line ri-lg text-gray-700"></i>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-gray-900 text-white py-12">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="md:col-span-1">
+<a href="#" class="inline-block mb-4">
+<span class="text-2xl font-['Pacifico'] text-white">logo</span>
+</a>
+<p class="text-gray-400 mb-6">Aprende a programar desde cero con nuestro curso intensivo y práctico. Desarrolla habilidades que transformarán tu futuro profesional.</p>
+<div class="flex space-x-4">
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-facebook-fill ri-lg"></i>
+</div>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-twitter-x-fill ri-lg"></i>
+</div>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-instagram-fill ri-lg"></i>
+</div>
+</a>
+<a href="#" class="text-gray-400 hover:text-white transition-colors">
+<div class="w-10 h-10 flex items-center justify-center">
+<i class="ri-linkedin-fill ri-lg"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="md:col-span-1">
+<h3 class="text-lg font-semibold mb-4">Enlaces Rápidos</h3>
+<ul class="space-y-2">
+<li><a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Inicio</a></li>
+<li><a href="#que-aprenderas" class="text-gray-400 hover:text-white transition-colors">¿Qué Aprenderás?</a></li>
+<li><a href="#instructor" class="text-gray-400 hover:text-white transition-colors">Instructor</a></li>
+<li><a href="#faq" class="text-gray-400 hover:text-white transition-colors">Preguntas Frecuentes</a></li>
+<li><a href="#contacto" class="text-gray-400 hover:text-white transition-colors">Contacto</a></li>
+<li><a href="#pago" class="text-gray-400 hover:text-white transition-colors">Inscripción</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h3 class="text-lg font-semibold mb-4">Legal</h3>
+<ul class="space-y-2">
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Términos y Condiciones</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Política de Privacidad</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Política de Cookies</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Política de Reembolso</a></li>
+<li><a href="#" class="text-gray-400 hover:text-white transition-colors">Aviso Legal</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h3 class="text-lg font-semibold mb-4">Contacto</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-0.5">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-400">info@cursoprogramacion.es</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-0.5">
+<i class="ri-phone-line"></i>
+</div>
+<span class="text-gray-400">+34 91 123 45 67</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-gray-400 mr-3 mt-0.5">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="text-gray-400">Calle Gran Vía 1, 28013 Madrid, España</span>
+</li>
+</ul>
+<div class="mt-6">
+<h3 class="text-lg font-semibold mb-4">Newsletter</h3>
+<form class="flex">
+<input type="email" placeholder="Tu email" class="flex-1 px-4 py-2 !rounded-l-md border-none focus:outline-none focus:ring-2 focus:ring-primary/50 text-gray-900 text-sm">
+<button type="submit" class="bg-primary text-white px-4 py-2 !rounded-r-button font-medium hover:bg-primary/90 transition-all whitespace-nowrap">Suscribir</button>
+</form>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025 Curso de Programación. Todos los derechos reservados.</p>
+<div class="flex space-x-6">
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-visa-fill ri-lg text-gray-400"></i>
+</div>
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-mastercard-fill ri-lg text-gray-400"></i>
+</div>
+<div class="w-10 h-6 flex items-center justify-center">
+<i class="ri-paypal-fill ri-lg text-gray-400"></i>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Back to Top Button -->
+<button id="back-to-top" class="fixed bottom-6 right-6 w-12 h-12 bg-primary text-white !rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all z-50">
+<i class="ri-arrow-up-line ri-lg"></i>
+</button>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Modal functionality
+const modalOverlay = document.getElementById('modal-overlay');
+const module1Details = document.getElementById('module1-details');
+const module1Modal = document.getElementById('module1-modal');
+const closeButtons = document.querySelectorAll('.modal-close');
+function openModal(modal) {
+modalOverlay.classList.remove('hidden');
+modal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+modalOverlay.classList.add('hidden');
+document.querySelectorAll('[id$="-modal"]').forEach(modal => {
+modal.classList.add('hidden');
+});
+document.body.style.overflow = '';
+}
+module1Details.addEventListener('click', () => openModal(module1Modal));
+closeButtons.forEach(button => {
+button.addEventListener('click', closeModal);
+});
+modalOverlay.addEventListener('click', closeModal);
+// Close modal on escape key
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape') {
+closeModal();
+}
+});
+// Mobile menu toggle
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+// Close mobile menu when clicking on a link
+const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+mobileMenuLinks.forEach(link => {
+link.addEventListener('click', function() {
+mobileMenu.classList.add('hidden');
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// FAQ toggle
+const faqToggles = document.querySelectorAll('.faq-toggle');
+faqToggles.forEach(toggle => {
+toggle.addEventListener('click', function() {
+const faqItem = this.closest('.faq-item');
+const faqContent = faqItem.querySelector('.faq-content');
+const iconPlus = this.querySelector('.faq-icon-plus');
+const iconMinus = this.querySelector('.faq-icon-minus');
+faqItem.classList.toggle('active');
+if (faqItem.classList.contains('active')) {
+iconPlus.classList.add('hidden');
+iconMinus.classList.remove('hidden');
+} else {
+iconPlus.classList.remove('hidden');
+iconMinus.classList.add('hidden');
+}
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Contact form validation
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+let isValid = true;
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const subject = document.getElementById('subject');
+const message = document.getElementById('message');
+// Reset feedback
+document.querySelectorAll('.form-feedback').forEach(el => {
+el.textContent = '';
+});
+// Validate name
+if (!name.value.trim()) {
+name.nextElementSibling.textContent = 'Por favor, introduce tu nombre';
+isValid = false;
+}
+// Validate email
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!email.value.trim() || !emailRegex.test(email.value)) {
+email.nextElementSibling.textContent = 'Por favor, introduce un email válido';
+isValid = false;
+}
+// Validate subject
+if (!subject.value.trim()) {
+subject.nextElementSibling.textContent = 'Por favor, introduce un asunto';
+isValid = false;
+}
+// Validate message
+if (!message.value.trim()) {
+message.nextElementSibling.textContent = 'Por favor, introduce un mensaje';
+isValid = false;
+}
+if (isValid) {
+// Show success message
+alert('¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.');
+contactForm.reset();
+}
+});
+}
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Custom checkbox functionality
+const customCheckboxes = document.querySelectorAll('.custom-checkbox');
+customCheckboxes.forEach(checkbox => {
+const input = checkbox.previousElementSibling;
+const checkIcon = checkbox.querySelector('.checkbox-checked');
+checkbox.addEventListener('click', function() {
+input.checked = !input.checked;
+if (input.checked) {
+checkbox.classList.add('bg-primary', 'border-primary');
+checkIcon.classList.remove('hidden');
+} else {
+checkbox.classList.remove('bg-primary', 'border-primary');
+checkIcon.classList.add('hidden');
+}
+});
+});
+// Custom radio functionality
+const customRadios = document.querySelectorAll('.custom-radio');
+customRadios.forEach(radio => {
+const input = radio.previousElementSibling;
+const radioChecked = radio.querySelector('.radio-checked');
+radio.addEventListener('click', function() {
+// Uncheck all radios in the same group
+const name = input.getAttribute('name');
+document.querySelectorAll(`input[name="${name}"]`).forEach(groupInput => {
+const groupRadio = groupInput.nextElementSibling;
+const groupRadioChecked = groupRadio.querySelector('.radio-checked');
+groupInput.checked = false;
+groupRadioChecked.classList.add('hidden');
+});
+// Check this radio
+input.checked = true;
+radioChecked.classList.remove('hidden');
+});
+// Initialize state
+if (input.checked) {
+radioChecked.classList.remove('hidden');
+}
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Payment method selection
+const paymentMethodOptions = document.querySelectorAll('.payment-method-option');
+const cardPaymentDetails = document.getElementById('card-payment-details');
+const paypalPaymentDetails = document.getElementById('paypal-payment-details');
+const transferPaymentDetails = document.getElementById('transfer-payment-details');
+paymentMethodOptions.forEach(option => {
+const input = option.querySelector('input[name="payment-method"]');
+const checkMark = option.querySelector('.payment-method-check');
+option.addEventListener('click', function() {
+// Uncheck all options
+paymentMethodOptions.forEach(opt => {
+opt.classList.remove('border-primary');
+opt.querySelector('.payment-method-check').classList.add('hidden');
+});
+// Check this option
+option.classList.add('border-primary');
+checkMark.classList.remove('hidden');
+// Update input
+input.checked = true;
+// Show/hide payment details
+if (input.value === 'card') {
+cardPaymentDetails.classList.remove('hidden');
+paypalPaymentDetails.classList.add('hidden');
+transferPaymentDetails.classList.add('hidden');
+} else if (input.value === 'paypal') {
+cardPaymentDetails.classList.add('hidden');
+paypalPaymentDetails.classList.remove('hidden');
+transferPaymentDetails.classList.add('hidden');
+} else if (input.value === 'transfer') {
+cardPaymentDetails.classList.add('hidden');
+paypalPaymentDetails.classList.add('hidden');
+transferPaymentDetails.classList.remove('hidden');
+}
+});
+// Initialize state
+if (input.checked) {
+option.classList.add('border-primary');
+checkMark.classList.remove('hidden');
+if (input.value === 'card') {
+cardPaymentDetails.classList.remove('hidden');
+} else if (input.value === 'paypal') {
+paypalPaymentDetails.classList.remove('hidden');
+} else if (input.value === 'transfer') {
+transferPaymentDetails.classList.remove('hidden');
+}
+}
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Payment steps navigation
+const paymentStep1 = document.getElementById('payment-step-1');
+const paymentStep2 = document.getElementById('payment-step-2');
+const paymentStep3 = document.getElementById('payment-step-3');
+const paymentForm1 = document.getElementById('payment-form-1');
+const paymentForm2 = document.getElementById('payment-form-2');
+const backToStep1 = document.getElementById('back-to-step-1');
+const paymentSteps = document.querySelectorAll('.payment-step');
+// Step 1 to Step 2
+if (paymentForm1) {
+paymentForm1.addEventListener('submit', function(e) {
+e.preventDefault();
+let isValid = true;
+const name = document.getElementById('payment-name');
+const email = document.getElementById('payment-email');
+const phone = document.getElementById('payment-phone');
+const terms = document.getElementById('payment-terms');
+// Reset feedback
+paymentForm1.querySelectorAll('.form-feedback').forEach(el => {
+el.textContent = '';
+});
+// Validate name
+if (!name.value.trim()) {
+name.nextElementSibling.textContent = 'Por favor, introduce tu nombre completo';
+isValid = false;
+}
+// Validate email
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!email.value.trim() || !emailRegex.test(email.value)) {
+email.nextElementSibling.textContent = 'Por favor, introduce un email válido';
+isValid = false;
+}
+// Validate phone
+const phoneRegex = /^\+?[0-9]{9,15}$/;
+if (!phone.value.trim() || !phoneRegex.test(phone.value.replace(/\s/g, ''))) {
+phone.nextElementSibling.textContent = 'Por favor, introduce un teléfono válido';
+isValid = false;
+}
+// Validate terms
+if (!terms.checked) {
+terms.parentElement.nextElementSibling.textContent = 'Debes aceptar los términos y condiciones';
+isValid = false;
+}
+if (isValid) {
+// Save email for confirmation
+document.getElementById('confirmation-email').textContent = email.value;
+// Go to step 2
+paymentStep1.classList.add('hidden');
+paymentStep2.classList.remove('hidden');
+// Update steps indicator
+paymentSteps[0].classList.remove('active');
+paymentSteps[1].classList.add('active');
+}
+});
+}
+// Back to Step 1
+if (backToStep1) {
+backToStep1.addEventListener('click', function() {
+paymentStep2.classList.add('hidden');
+paymentStep1.classList.remove('hidden');
+// Update steps indicator
+paymentSteps[1].classList.remove('active');
+paymentSteps[0].classList.add('active');
+});
+}
+// Step 2 to Step 3
+if (paymentForm2) {
+paymentForm2.addEventListener('submit', function(e) {
+e.preventDefault();
+let isValid = true;
+const paymentMethod = document.querySelector('input[name="payment-method"]:checked').value;
+// Reset feedback
+paymentForm2.querySelectorAll('.form-feedback').forEach(el => {
+el.textContent = '';
+});
+// Validate card details if card payment
+if (paymentMethod === 'card') {
+const cardNumber = document.getElementById('card-number');
+const cardExpiry = document.getElementById('card-expiry');
+const cardCVC = document.getElementById('card-cvc');
+const cardName = document.getElementById('card-name');
+// Validate card number
+const cardNumberRegex = /^[0-9]{16}$/;
+if (!cardNumber.value.trim() || !cardNumberRegex.test(cardNumber.value.replace(/\s/g, ''))) {
+cardNumber.nextElementSibling.textContent = 'Por favor, introduce un número de tarjeta válido';
+isValid = false;
+}
+// Validate expiry
+const expiryRegex = /^(0[1-9]|1[0-2])\/([0-9]{2})$/;
+if (!cardExpiry.value.trim() || !expiryRegex.test(cardExpiry.value)) {
+cardExpiry.nextElementSibling.textContent = 'Formato MM/AA';
+isValid = false;
+}
+// Validate CVC
+const cvcRegex = /^[0-9]{3,4}$/;
+if (!cardCVC.value.trim() || !cvcRegex.test(cardCVC.value)) {
+cardCVC.nextElementSibling.textContent = 'CVC inválido';
+isValid = false;
+}
+// Validate name
+if (!cardName.value.trim()) {
+cardName.nextElementSibling.textContent = 'Introduce el nombre como aparece en la tarjeta';
+isValid = false;
+}
+}
+if (isValid) {
+// Go to step 3
+paymentStep2.classList.add('hidden');
+paymentStep3.classList.remove('hidden');
+// Update steps indicator
+paymentSteps[1].classList.remove('active');
+paymentSteps[2].classList.add('active');
+}
+});
+}
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Feedback form file upload
+const fileInput = document.getElementById('feedback-file');
+const fileNameDisplay = document.getElementById('file-name');
+if (fileInput) {
+fileInput.addEventListener('change', function() {
+if (fileInput.files.length > 0) {
+fileNameDisplay.textContent = `Archivo seleccionado: ${fileInput.files[0].name}`;
+} else {
+fileNameDisplay.textContent = '';
+}
+});
+}
+// Ticket check
+const checkTicketButton = document.getElementById('check-ticket');
+const ticketResult = document.getElementById('ticket-result');
+if (checkTicketButton) {
+checkTicketButton.addEventListener('click', function() {
+const ticketId = document.getElementById('ticket-id').value;
+if (ticketId.trim()) {
+// Show ticket info (in a real app, this would fetch from server)
+document.getElementById('ticket-number').textContent = ticketId;
+ticketResult.classList.remove('hidden');
+} else {
+alert('Por favor, introduce un número de ticket válido');
+}
+});
+}
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Back to top button
+const backToTopButton = document.getElementById('back-to-top');
+window.addEventListener('scroll', function() {
+if (window.pageYOffset > 300) {
+backToTopButton.classList.remove('opacity-0', 'invisible');
+backToTopButton.classList.add('opacity-100', 'visible');
+} else {
+backToTopButton.classList.remove('opacity-100', 'visible');
+backToTopButton.classList.add('opacity-0', 'invisible');
+}
+});
+backToTopButton.addEventListener('click', function() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+});
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+anchor.addEventListener('click', function(e) {
+e.preventDefault();
+const targetId = this.getAttribute('href');
+if (targetId === '#') return;
+const targetElement = document.querySelector(targetId);
+if (targetElement) {
+window.scrollTo({
+top: targetElement.offsetTop - 80, // Adjust for header height
+behavior: 'smooth'
+});
+}
+});
+});
+});
+</script>
+</body>
+</html>
